@@ -1,14 +1,22 @@
+/*
+ * @Author: your name
+ * @Date: 2020-11-03 18:13:40
+ * @LastEditTime: 2020-11-03 21:39:17
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vue-admain\src\router\index.js
+ */
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+// import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+/*     name: 'Home',
+    component: Home */
   },
   {
     path: '/about',
