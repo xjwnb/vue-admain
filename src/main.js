@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-03 18:13:40
- * @LastEditTime: 2020-11-04 15:00:30
+ * @LastEditTime: 2020-11-04 15:26:32
  * @LastEditors: Please set LastEditors
  * @Description: Vue 文件入口文件
  * @FilePath: \vue-admain\src\main.js
@@ -24,6 +24,7 @@ import {
 } from '@/http/userList';
 getUserList().then(res => {
   console.log("请求-getUserList()", res);
+  console.log(res.data);
 });
 
 // 安装 element 插件

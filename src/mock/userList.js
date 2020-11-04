@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-04 13:00:05
- * @LastEditTime: 2020-11-04 14:55:40
+ * @LastEditTime: 2020-11-04 15:29:51
  * @LastEditors: Please set LastEditors
  * @Description: Mock 用户列表配置文件
  * @FilePath: \vue-admain\src\mock\index.js
@@ -25,6 +25,7 @@ import {
  * @returns {Object} 用户列表对象
  */
 function getUserList() {
+  // 生成的用户列表数组
   let userList = generUserRandom(USER_COUNT_MIN, USER_COUNT_MAX, USER_AGE_MIN, USER_AGE_MAX);
   const users = [
     Mock.mock({
