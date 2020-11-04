@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-03 18:13:40
- * @LastEditTime: 2020-11-05 00:09:34
+ * @LastEditTime: 2020-11-05 00:43:48
  * @LastEditors: Please set LastEditors
  * @Description: Vue 文件入口文件
  * @FilePath: \vue-admain\src\main.js
@@ -46,3 +46,13 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount("#app");
+
+router.beforeEach((to, from, next) => {
+  console.log(to, from);
+  if (to.name === "login") {
+    console.log("login");
+  }
+  next();
+});
+
+import '@/utils/login'
