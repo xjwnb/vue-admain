@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-03 18:13:40
- * @LastEditTime: 2020-11-03 21:39:17
+ * @LastEditTime: 2020-11-04 10:50:34
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\router\index.js
@@ -17,6 +17,9 @@ const routes = [
     path: '/',
 /*     name: 'Home',
     component: Home */
+  },
+  {
+    path: '/login'
   },
   {
     path: '/about',
