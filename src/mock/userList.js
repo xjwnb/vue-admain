@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-04 13:00:05
- * @LastEditTime: 2020-11-04 15:29:51
+ * @LastEditTime: 2020-11-04 15:37:35
  * @LastEditors: Please set LastEditors
  * @Description: Mock 用户列表配置文件
  * @FilePath: \vue-admain\src\mock\index.js
@@ -25,13 +25,12 @@ import {
  * @returns {Object} 用户列表对象
  */
 function getUserList() {
-  // 生成的用户列表数组
+  // 生成的随机用户列表数组
   let userList = generUserRandom(USER_COUNT_MIN, USER_COUNT_MAX, USER_AGE_MIN, USER_AGE_MAX);
-  const users = [
-    Mock.mock({
-      userList: JSON.parse(JSON.stringify(userList))
-    })
-  ];
+  const users = Mock.mock({
+    userList: JSON.parse(JSON.stringify(userList))
+  });
+
   return users;
 }
 
@@ -73,7 +72,7 @@ function generUserRandom(userCountMin, userCountMax, ageMin, ageMax) {
   let userList = [];
   for (let i = 0; i < userCount; i++) {
     const user = new User();
-    user.setName(Random.cfirst() + Random.cname());
+    user.setName(Random.cname());
     user.setAge(Math.floor(Math.random() * ageMax + ageMin));
     userList.push(user);
   }
