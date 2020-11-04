@@ -1,14 +1,18 @@
 /*
  * @Author: your name
  * @Date: 2020-11-03 18:13:40
- * @LastEditTime: 2020-11-04 15:26:32
+ * @LastEditTime: 2020-11-04 21:37:35
  * @LastEditors: Please set LastEditors
  * @Description: Vue 文件入口文件
  * @FilePath: \vue-admain\src\main.js
  */
 import Vue from "vue";
 import App from "./App.vue";
+// 引入全局样式
+import '@/assets/css/index.css';
+// 引入路由
 import router from "./router";
+// 引入 vuex
 import store from "./store";
 // 引入 Element-UI 样式
 import "element-ui/lib/theme-chalk/index.css";

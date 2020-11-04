@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-03 18:13:40
- * @LastEditTime: 2020-11-04 10:50:34
+ * @LastEditTime: 2020-11-04 19:57:28
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\router\index.js
@@ -9,14 +9,23 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 // import Home from '../views/Home.vue'
+// 登录页面
+const Login = resolve => require(['@/views/Login.vue'], resolve);
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
+    name: 'index',
+    meta: ['user', 'password']
 /*     name: 'Home',
     component: Home */
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: Login
   },
   {
     path: '/login'
