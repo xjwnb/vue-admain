@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-04 10:50:49
- * @LastEditTime: 2020-11-04 20:54:58
+ * @LastEditTime: 2020-11-05 00:15:22
  * @LastEditors: Please set LastEditors
  * @Description: Login 登录页面
  * @FilePath: \vue-admain\src\views\Login.vue
@@ -12,8 +12,8 @@
       <!-- 登录表单 -->
       <el-form ref="form" :model="form" :rules="rules" label-width="65px">
         <!-- 用户名 -->
-        <el-form-item label="用户名" prop="name">
-          <el-input v-model="form.name" placeholder="请输入用户名"></el-input>
+        <el-form-item label="用户名" prop="username">
+          <el-input v-model="form.username" placeholder="请输入用户名"></el-input>
         </el-form-item>
         <!-- 密码 -->
         <el-form-item label="密码" prop="password">
@@ -33,16 +33,18 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: "Login",
   data() {
     return {
       form: {
-        name: "",
-        password: "",
+        username: this.$store.getters.getUserName,
+        password: this.$store.getters.getPassword,
       },
       rules: {
-        name: [
+        username: [
           {
             required: true,
             message: "用户名不能为空",
@@ -78,20 +80,40 @@ export default {
       },
     };
   },
+  computed: {
+    ...mapGetters([
+      "compareNameAndPassword"
+    ])
+  },
   created() {
     document.title = "登录";
   },
-  mounted() {},
+  mounted() {
+  },
   methods: {
-    // 表单提交事件
+    /**
+     * 表单提交事件
+     * @param {object} form 表单对象
+     * @param {object} event 事件对象
+     */
     onSubmit(form, event) {
-      console.log(form);
+      // 阻止默认行为
       event.preventDefault();
+      // 获取比较后的数字
+      let compare = this.compareNameAndPassword(form);
+      // 如果相等
+      if (compare === 0) {
+        // 将用户名和密码存储在本地存储中
+        this.$localStorage.setItem("username", this.form.username);
+        this.$localStorage.setItem("password", this.form.password);
+        // 跳转到首页
+        this.$router.push({ name: 'index' });
+      }
     },
     /**
      * 自定义用户名规则
-     * @param {Object} rule 规则
-     * @param {String} val 值
+     * @param {object} rule 规则
+     * @param {string} val 值
      * @param {Function} callback 回调函数
      */
     validatorName(rule, val, callback) {

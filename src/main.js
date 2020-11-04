@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-03 18:13:40
- * @LastEditTime: 2020-11-04 21:37:35
+ * @LastEditTime: 2020-11-05 00:09:34
  * @LastEditors: Please set LastEditors
  * @Description: Vue 文件入口文件
  * @FilePath: \vue-admain\src\main.js
@@ -33,6 +33,11 @@ getUserList().then(res => {
 
 // 安装 element 插件
 Vue.use(element);
+
+// 设置 $store
+Vue.prototype.$store = store;
+// 设置 localStorage
+Vue.prototype.$localStorage = window.localStorage;
 
 Vue.config.productionTip = false;
 
