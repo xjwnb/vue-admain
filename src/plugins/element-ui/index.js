@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-03 21:08:56
- * @LastEditTime: 2020-11-04 17:12:05
+ * @LastEditTime: 2020-11-05 14:10:12
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\plugins\elementUI.js
@@ -12,6 +12,10 @@ import {
   Form,
   FormItem,
   Input,
+  Container,
+  Header,
+  Aside,
+  Main,
   Message
 } from "element-ui";
 
@@ -21,6 +25,10 @@ const element = {
     Vue.use(Form);
     Vue.use(FormItem);
     Vue.use(Input);
+    Vue.use(Container);
+    Vue.use(Header);
+    Vue.use(Aside);
+    Vue.use(Main);
     
 
     Vue.prototype.$message = Message;

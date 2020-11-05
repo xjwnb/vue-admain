@@ -1,24 +1,31 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-03 18:13:40
- * @LastEditTime: 2020-11-05 13:08:47
+ * @LastEditTime: 2020-11-05 14:15:31
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\views\Home.vue
 -->
 <template>
   <div class="home">
-    <router-link :to="{ name: 'login' }">登录</router-link>
+    <Container></Container>
+    <!-- <router-link :to="{ name: 'login' }">登录</router-link> -->
   </div>
 </template>
 
 <script>
+// 引入是否登录工具方法
 import { isLogin } from "@/utils/login";
+// 引入常量
 import { TO_LOGIN_TIME_OUT_SECOND } from '@/const'
+// 引入布局容器组件
+import { Container } from '@/common'
 
 export default {
   name: "Home",
-  components: {},
+  components: {
+    Container
+  },
   data() {
     return {
       // 跳转登录定时器
@@ -26,7 +33,6 @@ export default {
     };
   },
   created() {
-    console.log(11111);
     // 是否登录
     this.loginState();
   },
