@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-03 18:13:40
- * @LastEditTime: 2020-11-05 01:02:11
+ * @LastEditTime: 2020-11-05 11:25:16
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\views\Home.vue
@@ -21,8 +21,8 @@ export default {
   data() {
     return {
       // 跳转登录定时器
-      loginTimeout: null
-    }
+      loginTimeout: null,
+    };
   },
   created() {
     console.log(11111);
@@ -32,13 +32,16 @@ export default {
   methods: {
     /**
      * 登录状态，没登陆这自动跳转到登录页
-     * 
+     *
      */
     loginState() {
       // 登录状态
       let islogin = isLogin();
       let _this = this;
       if (!islogin) {
+        // 提示请重新登录
+        this.$message({ message: "请登录！", type: "warning" });
+        // 3秒后跳转到登录页面
         _this.loginTimeout = window.setTimeout(function () {
           _this.$router.push({ name: "login" });
         }, 3000);
@@ -47,6 +50,6 @@ export default {
   },
   destroyed() {
     window.clearTimeout(this.loginTimeout);
-  }
+  },
 };
 </script>
