@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-05 14:08:37
- * @LastEditTime: 2020-11-05 15:31:34
+ * @LastEditTime: 2020-11-05 23:02:38
  * @LastEditors: Please set LastEditors
  * @Description: 布局容器
  * @FilePath: \vue-admain\src\common\Container\index.vue
@@ -13,8 +13,13 @@
         <slot name="header"></slot>
       </el-header>
       <el-container>
-        <el-aside width="200px">Aside</el-aside>
-        <el-main>Main</el-main>
+        <el-aside width="200px">
+          <slot name="aside"></slot>
+        </el-aside>
+        <el-main>
+          <!-- <slot v-slot:main></slot> -->
+          <router-view></router-view>
+        </el-main>
       </el-container>
     </el-container>
   </div>
@@ -32,12 +37,12 @@ export default {
 </script>
 <style scoped>
   .el-header{
-    background-color: #0fbcf9;
+    background-color:#485460;
     color: #333;
   }
   
   .el-aside {
-    background-color: #D3DCE6;
+    background-color: #1e272e;
     color: #333;
     position: absolute;
     bottom: 0px;

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-03 18:13:40
- * @LastEditTime: 2020-11-05 16:55:14
+ * @LastEditTime: 2020-11-05 21:32:28
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\views\Home.vue
@@ -9,12 +9,24 @@
 <template>
   <div class="home">
     <Container>
+      <!-- 头部 -->
       <template v-slot:header>
         <div class="header">
           <Logo />
           <User />
         </div>
       </template>
+      <!-- 侧边 -->
+      <template v-slot:aside>
+        <div>
+          <!-- <router-link to="/vab/table">表格</router-link> -->
+          <NavMenu :navbarList="navbarList" />
+        </div>
+      </template>
+      <!-- 内容 -->
+      <!-- <template v-slot:main>
+        <router-view></router-view>
+      </template> -->
     </Container>
     <!-- <router-link :to="{ name: 'login' }">登录</router-link> -->
   </div>
@@ -22,35 +34,39 @@
 
 <script>
 // 引入工具方法
-import { 
+import {
   // 是否登录
   isLogin,
 } from "@/utils/login";
 // 引入常量
 import { TO_LOGIN_TIME_OUT_SECOND } from "@/const";
 // 引入布局容器组件
-import { 
-  Container, 
-  Logo,
-  User
-} from "@/common";
+import { Container, Logo, User, NavMenu } from "@/common";
+// 引入导航数据
+import { navbarList } from '@/mock/navBar'
 
 export default {
   name: "Home",
   components: {
     Container,
     Logo,
-    User
+    User,
+    NavMenu
   },
   data() {
     return {
       // 跳转登录定时器
       loginTimeout: null,
+      // 导航列表
+      navbarList,
     };
   },
   created() {
     // 是否登录
     this.loginState();
+  },
+  mounted() {
+    // console.log(navbarList);
   },
   methods: {
     /**

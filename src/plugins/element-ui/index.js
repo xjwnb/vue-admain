@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-03 21:08:56
- * @LastEditTime: 2020-11-05 16:33:18
+ * @LastEditTime: 2020-11-05 20:37:10
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\plugins\elementUI.js
@@ -18,6 +18,12 @@ import {
   Main,
   Image,
   Avatar,
+  Row,
+  Col,
+  Menu,
+  MenuItem,
+  MenuItemGroup,
+  Submenu,
   Message
 } from "element-ui";
 
@@ -33,6 +39,12 @@ const element = {
     Vue.use(Main);
     Vue.use(Image);
     Vue.use(Avatar);
+    Vue.use(Row);
+    Vue.use(Col);
+    Vue.use(Menu);
+    Vue.use(MenuItem);
+    Vue.use(MenuItemGroup);
+    Vue.use(Submenu);
     
 
     Vue.prototype.$message = Message;

@@ -1,13 +1,15 @@
 /*
  * @Author: your name
  * @Date: 2020-11-03 18:13:40
- * @LastEditTime: 2020-11-05 00:43:48
+ * @LastEditTime: 2020-11-05 23:20:12
  * @LastEditors: Please set LastEditors
  * @Description: Vue 文件入口文件
  * @FilePath: \vue-admain\src\main.js
  */
 import Vue from "vue";
 import App from "./App.vue";
+// 引入 icon
+import '@/assets/icon/iconfont.css';
 // 引入全局样式
 import '@/assets/css/index.css';
 // 引入路由
@@ -54,5 +56,3 @@ router.beforeEach((to, from, next) => {
   }
   next();
 });
-
-import '@/utils/login'

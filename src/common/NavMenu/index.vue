@@ -1,0 +1,59 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-11-05 18:42:43
+ * @LastEditTime: 2020-11-05 23:56:55
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vue-admain\src\common\NavMenu\index.vue
+-->
+<template>
+  <div>
+    <el-row class="tac">
+      <el-col :span="24">
+        <el-menu
+          :default-active="$route.path"
+          class="el-menu-vertical-demo"
+          @open="handleOpen"
+          @close="handleClose"
+          background-color="#808e9b"
+          text-color="#ffffff"
+          router
+        >
+          <Menu :navbarList="navbarList"></Menu>
+        </el-menu>
+      </el-col>
+    </el-row>
+  </div>
+</template>
+
+<script>
+import Menu from "./Menu";
+
+export default {
+  name: "NavMenu",
+  components: {
+    Menu,
+  },
+  props: {
+    navbarList: {
+      type: Array,
+    },
+  },
+  data() {
+    return {};
+  },
+  created() {},
+  mounted() {},
+  methods: {
+    handleOpen(key, keyPath) {
+      console.log(key, keyPath);
+    },
+    handleClose(key, keyPath) {
+      console.log(key, keyPath);
+    },
+  },
+};
+</script>
+<style scoped>
+
+</style>
