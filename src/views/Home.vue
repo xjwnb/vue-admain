@@ -1,30 +1,46 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-03 18:13:40
- * @LastEditTime: 2020-11-05 14:15:31
+ * @LastEditTime: 2020-11-05 16:55:14
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\views\Home.vue
 -->
 <template>
   <div class="home">
-    <Container></Container>
+    <Container>
+      <template v-slot:header>
+        <div class="header">
+          <Logo />
+          <User />
+        </div>
+      </template>
+    </Container>
     <!-- <router-link :to="{ name: 'login' }">登录</router-link> -->
   </div>
 </template>
 
 <script>
-// 引入是否登录工具方法
-import { isLogin } from "@/utils/login";
+// 引入工具方法
+import { 
+  // 是否登录
+  isLogin,
+} from "@/utils/login";
 // 引入常量
-import { TO_LOGIN_TIME_OUT_SECOND } from '@/const'
+import { TO_LOGIN_TIME_OUT_SECOND } from "@/const";
 // 引入布局容器组件
-import { Container } from '@/common'
+import { 
+  Container, 
+  Logo,
+  User
+} from "@/common";
 
 export default {
   name: "Home",
   components: {
-    Container
+    Container,
+    Logo,
+    User
   },
   data() {
     return {
@@ -60,3 +76,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+</style>

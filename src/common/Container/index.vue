@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-05 14:08:37
- * @LastEditTime: 2020-11-05 14:23:33
+ * @LastEditTime: 2020-11-05 15:31:34
  * @LastEditors: Please set LastEditors
  * @Description: 布局容器
  * @FilePath: \vue-admain\src\common\Container\index.vue
@@ -9,7 +9,9 @@
 <template>
   <div>
     <el-container>
-      <el-header>Header</el-header>
+      <el-header>
+        <slot name="header"></slot>
+      </el-header>
       <el-container>
         <el-aside width="200px">Aside</el-aside>
         <el-main>Main</el-main>
@@ -20,6 +22,7 @@
 
 <script>
 export default {
+  name: 'Container',
   data() {
     return {};
   },
@@ -29,17 +32,13 @@ export default {
 </script>
 <style scoped>
   .el-header{
-    background-color: #B3C0D1;
+    background-color: #0fbcf9;
     color: #333;
-    text-align: center;
-    line-height: 60px;
   }
   
   .el-aside {
     background-color: #D3DCE6;
     color: #333;
-    text-align: center;
-    line-height: 200px;
     position: absolute;
     bottom: 0px;
     top: 60px;
@@ -48,8 +47,6 @@ export default {
   .el-main {
     background-color: #E9EEF3;
     color: #333;
-    text-align: center;
-    line-height: 160px;
     position: absolute;
     top: 60px;
     left: 200px;
