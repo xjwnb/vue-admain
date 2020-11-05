@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-03 18:13:40
- * @LastEditTime: 2020-11-05 11:25:16
+ * @LastEditTime: 2020-11-05 13:08:47
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\views\Home.vue
@@ -14,6 +14,7 @@
 
 <script>
 import { isLogin } from "@/utils/login";
+import { TO_LOGIN_TIME_OUT_SECOND } from '@/const'
 
 export default {
   name: "Home",
@@ -40,11 +41,11 @@ export default {
       let _this = this;
       if (!islogin) {
         // 提示请重新登录
-        this.$message({ message: "请登录！", type: "warning" });
+        this.$message({ message: "请重新登陆登录！", type: "warning" });
         // 3秒后跳转到登录页面
         _this.loginTimeout = window.setTimeout(function () {
           _this.$router.push({ name: "login" });
-        }, 3000);
+        }, TO_LOGIN_TIME_OUT_SECOND);
       }
     },
   },
