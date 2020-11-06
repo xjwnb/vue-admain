@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-03 18:13:40
- * @LastEditTime: 2020-11-05 23:59:47
+ * @LastEditTime: 2020-11-06 11:47:07
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\router\index.js
@@ -21,11 +21,12 @@ const routes = [
     // name: 'index',
     redirect: "index",
     component: Layout,
-    // meta: ['username', 'password'],
+    // meta: { pathName: "首页" },
     children: [
       {
         path: "index",
         name: "index",
+        meta: { pathName: "首页" },
         component: () => import("@/views/index/index.vue")
       }
     ]
@@ -34,29 +35,38 @@ const routes = [
   {
     path: "/login",
     name: "login",
+    meta: { pathName: "登录" },
     component: Login
   },
   {
     path: "/vab",
     name: "vab",
+    meta: { pathName: "组件" },
     component: Layout,
     children: [
       {
         path: "table",
         name: "table",
+        meta: { pathName: "表格" },
         component: () => import("@/views/vab/Table/index.vue")
+      },
+      {
+        path: "about",
+        name: 'about',
+        meta: { pathName: "关于" },
+        component: () => import("@/views/About.vue")
       }
     ]
   },
-  {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
-  }
+  // {
+  //   path: "/about",
+  //   name: "About",
+  //   // route level code-splitting
+  //   // this generates a separate chunk (about.[hash].js) for this route
+  //   // which is lazy-loaded when the route is visited.
+  //   component: () =>
+  //     import(/* webpackChunkName: "about" */ "../views/About.vue")
+  // }
 ];
 
 const router = new VueRouter({

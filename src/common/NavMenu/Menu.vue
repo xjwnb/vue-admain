@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-05 21:20:50
- * @LastEditTime: 2020-11-06 09:45:13
+ * @LastEditTime: 2020-11-06 10:38:40
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\common\NavMenu\Menu.vue
@@ -47,6 +47,14 @@ export default {
   mounted() {
     console.log(this.navbarList);
   },
+  methods: {
+    handleOpen(key, keyPath) {
+      console.log(key, keyPath);
+    },
+    handleClose(key, keyPath) {
+      console.log(key, keyPath);
+    },
+  }
 };
 </script>
 

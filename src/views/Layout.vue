@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-03 18:13:40
- * @LastEditTime: 2020-11-05 21:32:28
+ * @LastEditTime: 2020-11-06 11:38:10
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\views\Home.vue
@@ -19,9 +19,17 @@
       <!-- 侧边 -->
       <template v-slot:aside>
         <div>
+          <!-- 侧边导航栏 -->
           <!-- <router-link to="/vab/table">表格</router-link> -->
           <NavMenu :navbarList="navbarList" />
         </div>
+      </template>
+      <!-- 面包屑 -->
+      <template v-slot:breadcrumb>
+        <!-- <div>
+          {{ nowPath }}
+        </div> -->
+        <Breadcrumb />
       </template>
       <!-- 内容 -->
       <!-- <template v-slot:main>
@@ -41,17 +49,28 @@ import {
 // 引入常量
 import { TO_LOGIN_TIME_OUT_SECOND } from "@/const";
 // 引入布局容器组件
-import { Container, Logo, User, NavMenu } from "@/common";
+import { 
+  Container, 
+  Logo, 
+  User, 
+  NavMenu,
+  Breadcrumb } from "@/common";
 // 引入导航数据
 import { navbarList } from '@/mock/navBar'
 
 export default {
   name: "Home",
   components: {
+    // 布局容器
     Container,
+    // 顶部左侧 Logo
     Logo,
+    // 顶部右侧 user
     User,
-    NavMenu
+    // 侧边导航栏
+    NavMenu,
+    // 面包屑
+    Breadcrumb
   },
   data() {
     return {
@@ -59,14 +78,26 @@ export default {
       loginTimeout: null,
       // 导航列表
       navbarList,
+     /*  // 跳转的路由
+      toRoute: this.$route */
     };
+  },
+  watch: {
+    /* $route(to, from) {
+      console.log(to);
+      this.toRoute = to;
+      console.log(this.toRoute);
+    } */
   },
   created() {
     // 是否登录
     this.loginState();
+    
   },
   mounted() {
     // console.log(navbarList);
+  },
+  updated() {
   },
   methods: {
     /**

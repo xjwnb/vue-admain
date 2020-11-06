@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-05 14:08:37
- * @LastEditTime: 2020-11-06 09:54:33
+ * @LastEditTime: 2020-11-06 10:31:17
  * @LastEditors: Please set LastEditors
  * @Description: 布局容器
  * @FilePath: \vue-admain\src\common\Container\index.vue
@@ -21,7 +21,7 @@
         </el-aside>
         <el-main>
           <!-- 主题 -->
-          <!-- <slot v-slot:main></slot> -->
+          <slot name="breadcrumb"></slot>
           <router-view></router-view>
         </el-main>
       </el-container>
