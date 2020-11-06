@@ -1,22 +1,26 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-05 14:08:37
- * @LastEditTime: 2020-11-05 23:02:38
+ * @LastEditTime: 2020-11-06 09:54:33
  * @LastEditors: Please set LastEditors
  * @Description: 布局容器
  * @FilePath: \vue-admain\src\common\Container\index.vue
 -->
 <template>
   <div>
+    <!-- 布局容器 -->
     <el-container>
+      <!-- 头部 -->
       <el-header>
         <slot name="header"></slot>
       </el-header>
       <el-container>
+        <!-- 侧边 -->
         <el-aside width="200px">
           <slot name="aside"></slot>
         </el-aside>
         <el-main>
+          <!-- 主题 -->
           <!-- <slot v-slot:main></slot> -->
           <router-view></router-view>
         </el-main>
