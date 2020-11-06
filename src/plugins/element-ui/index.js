@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-03 21:08:56
- * @LastEditTime: 2020-11-06 11:09:38
+ * @LastEditTime: 2020-11-06 15:12:16
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\plugins\elementUI.js
@@ -26,6 +26,9 @@ import {
   Submenu,
   Breadcrumb,
   BreadcrumbItem,
+  Divider,
+  Table,
+  TableColumn,
   Message
 } from "element-ui";
 
@@ -49,6 +52,9 @@ const element = {
     Vue.use(Submenu);
     Vue.use(Breadcrumb);
     Vue.use(BreadcrumbItem);
+    Vue.use(Divider);
+    Vue.use(Table);
+    Vue.use(TableColumn);
     
 
     Vue.prototype.$message = Message;

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-03 18:13:40
- * @LastEditTime: 2020-11-06 11:38:10
+ * @LastEditTime: 2020-11-06 13:42:24
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\views\Home.vue
@@ -26,10 +26,9 @@
       </template>
       <!-- 面包屑 -->
       <template v-slot:breadcrumb>
-        <!-- <div>
-          {{ nowPath }}
-        </div> -->
         <Breadcrumb />
+        <!-- 分割线 -->
+        <el-divider></el-divider>
       </template>
       <!-- 内容 -->
       <!-- <template v-slot:main>
@@ -128,5 +127,9 @@ export default {
 .header {
   display: flex;
   justify-content: space-between;
+}
+/* 分割线 */
+.el-divider {
+  background-color: #7ed6df !important;
 }
 </style>

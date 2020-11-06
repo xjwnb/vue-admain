@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-03 18:13:40
- * @LastEditTime: 2020-11-05 23:20:12
+ * @LastEditTime: 2020-11-06 15:37:48
  * @LastEditors: Please set LastEditors
  * @Description: Vue 文件入口文件
  * @FilePath: \vue-admain\src\main.js
@@ -24,15 +24,6 @@ import element from "@/plugins/element-ui";
 import '@/mock/userList';
 
 
-// 测试 Mock 数据获取情况
-import {
-  getUserList
-} from '@/http/userList';
-getUserList().then(res => {
-  console.log("请求-getUserList()", res);
-  console.log(res.data);
-});
-
 // 安装 element 插件
 Vue.use(element);
 
@@ -50,7 +41,9 @@ new Vue({
 }).$mount("#app");
 
 router.beforeEach((to, from, next) => {
-  console.log(to, from);
+  // console.log(to, from);
+  // 修改页面标签名
+  document.title = "vue-admin - " + to.meta.pathName;
   if (to.name === "login") {
     console.log("login");
   }
