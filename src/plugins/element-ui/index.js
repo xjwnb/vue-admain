@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-03 21:08:56
- * @LastEditTime: 2020-11-06 15:12:16
+ * @LastEditTime: 2020-11-06 17:31:22
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\plugins\elementUI.js
@@ -29,6 +29,7 @@ import {
   Divider,
   Table,
   TableColumn,
+  Dialog,
   Message
 } from "element-ui";
 
@@ -55,6 +56,7 @@ const element = {
     Vue.use(Divider);
     Vue.use(Table);
     Vue.use(TableColumn);
+    Vue.use(Dialog);
     
 
     Vue.prototype.$message = Message;

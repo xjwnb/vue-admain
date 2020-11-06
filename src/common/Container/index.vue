@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-05 14:08:37
- * @LastEditTime: 2020-11-06 10:31:17
+ * @LastEditTime: 2020-11-06 16:34:33
  * @LastEditors: Please set LastEditors
  * @Description: 布局容器
  * @FilePath: \vue-admain\src\common\Container\index.vue
@@ -22,7 +22,9 @@
         <el-main>
           <!-- 主题 -->
           <slot name="breadcrumb"></slot>
-          <router-view></router-view>
+          <div class="container-router-view">
+            <router-view></router-view>
+          </div>
         </el-main>
       </el-container>
     </el-container>
@@ -31,7 +33,7 @@
 
 <script>
 export default {
-  name: 'Container',
+  name: "Container",
   data() {
     return {};
   },
@@ -40,32 +42,39 @@ export default {
 };
 </script>
 <style scoped>
-  .el-header{
-    background-color:#485460;
-    color: #333;
-  }
-  
-  .el-aside {
-    background-color: #1e272e;
-    color: #333;
-    position: absolute;
-    bottom: 0px;
-    top: 60px;
-  }
-  
-  .el-main {
-    background-color: #E9EEF3;
-    color: #333;
-    position: absolute;
-    top: 60px;
-    left: 200px;
-    bottom: 0px;
-    right: 0px;
-  }
-  
-  body > .el-container {
-    margin-bottom: 40px;
-    position: relative;
-  }
-  
+.el-header {
+  background-color: #485460;
+  color: #333;
+}
+
+.el-aside {
+  background-color: #1e272e;
+  color: #333;
+  position: absolute;
+  bottom: 0px;
+  top: 60px;
+}
+
+.el-main {
+  background-color: #e9eef3;
+  color: #333;
+  position: absolute;
+  top: 60px;
+  left: 200px;
+  bottom: 0px;
+  right: 0px;
+}
+
+body > .el-container {
+  margin-bottom: 40px;
+  position: relative;
+}
+/* 路由容器 */
+.container-router-view {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+}
 </style>
