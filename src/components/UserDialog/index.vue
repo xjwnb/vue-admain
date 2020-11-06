@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-06 17:24:51
- * @LastEditTime: 2020-11-06 21:14:02
+ * @LastEditTime: 2020-11-06 21:22:03
  * @LastEditors: Please set LastEditors
  * @Description: UserDialog 用户对话框
  * @FilePath: \vue-admain\src\components\UserDialog\index.vue
@@ -57,7 +57,7 @@ export default {
       // 编辑的对象
       editForm: this.editData,
       // 表单 label 宽度
-      formLabelWidth: "120px",
+      formLabelWidth: "80px",
       // 显示对话框
       isVisible: this.dialogVisible
     };
