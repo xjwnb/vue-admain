@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-06 10:07:40
- * @LastEditTime: 2020-11-06 12:55:53
+ * @LastEditTime: 2020-11-06 13:12:57
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\common\Breadcrumb\index.vue
@@ -46,5 +46,8 @@ export default {
 <style scoped>
 .el-breadcrumb span {
   font-size: 1rem;
+}
+.el-breadcrumb span:first-child {
+  font-weight: bolder;
 }
 </style>
