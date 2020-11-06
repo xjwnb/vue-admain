@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-05 18:42:43
- * @LastEditTime: 2020-11-05 23:56:55
+ * @LastEditTime: 2020-11-06 09:46:42
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\common\NavMenu\index.vue
@@ -10,6 +10,7 @@
   <div>
     <el-row class="tac">
       <el-col :span="24">
+        <!-- 侧边菜单 -->
         <el-menu
           :default-active="$route.path"
           class="el-menu-vertical-demo"
