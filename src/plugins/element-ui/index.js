@@ -1,13 +1,13 @@
 /*
  * @Author: your name
  * @Date: 2020-11-03 21:08:56
- * @LastEditTime: 2020-11-06 17:31:22
+ * @LastEditTime: 2020-11-06 20:38:21
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\plugins\elementUI.js
  */
 
-import { 
+import {
   Button,
   Form,
   FormItem,
@@ -30,7 +30,9 @@ import {
   Table,
   TableColumn,
   Dialog,
-  Message
+  DatePicker,
+  Message,
+  MessageBox
 } from "element-ui";
 
 const element = {
@@ -57,9 +59,13 @@ const element = {
     Vue.use(Table);
     Vue.use(TableColumn);
     Vue.use(Dialog);
-    
+    Vue.use(DatePicker);
 
     Vue.prototype.$message = Message;
+    Vue.prototype.$msgbox = MessageBox;
+    Vue.prototype.$alert = MessageBox.alert;
+    Vue.prototype.$confirm = MessageBox.confirm;
+    Vue.prototype.$prompt = MessageBox.prompt;
   }
 };
 

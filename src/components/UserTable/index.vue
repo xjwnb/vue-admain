@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-06 15:03:14
- * @LastEditTime: 2020-11-06 18:55:47
+ * @LastEditTime: 2020-11-06 21:19:56
  * @LastEditors: Please set LastEditors
  * @Description: 表格
  * @FilePath: \vue-admain\src\components\Table\index.vue
@@ -15,7 +15,7 @@
       <el-table-column prop="date" label="生日" width="300"></el-table-column>
       <el-table-column prop="edit" label="编辑" width="300">
         <template slot-scope="tableData">
-          <el-button type="primary" @click="edit(tableData.row, $event)"
+          <el-button type="primary" @click="edit(tableData.row)"
             >编辑</el-button
           >
           <el-button type="danger">删除</el-button>
@@ -44,11 +44,12 @@ export default {
   created() {},
   mounted() {},
   methods: {
-    edit(tableData, e) {
-      /* // 显示对话框
-      this.dialogVisible = true; */
-      this.$emit("editHnadler");
-      console.log(tableData, e);
+    /**
+     * 获取数据并触发事件将被编辑的数据传给父组件
+     * @param {object} editData 被点击的编辑行的数据对象
+     */
+    edit(editData) {
+      this.$emit("editHnadler", editData);
     },
   },
 };
