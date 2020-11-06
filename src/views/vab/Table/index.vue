@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-05 19:38:35
- * @LastEditTime: 2020-11-06 21:07:43
+ * @LastEditTime: 2020-11-06 21:45:30
  * @LastEditors: Please set LastEditors
  * @Description: 表格页
  * @FilePath: \vue-admain\src\views\vab\table\index.vue
@@ -79,8 +79,9 @@ export default {
     /**
      * 对话框中的确定操作
      */
-    determineHnadler() {
+    determineHnadler(afterEditData) {
       this.dialogVisible = false;
+      console.log(afterEditData);
     },
     /**
      * 触发对话框 X 事件

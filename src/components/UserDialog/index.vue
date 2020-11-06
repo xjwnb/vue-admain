@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-06 17:24:51
- * @LastEditTime: 2020-11-06 21:22:03
+ * @LastEditTime: 2020-11-06 21:55:53
  * @LastEditors: Please set LastEditors
  * @Description: UserDialog 用户对话框
  * @FilePath: \vue-admain\src\components\UserDialog\index.vue
@@ -55,7 +55,7 @@ export default {
   data() {
     return {
       // 编辑的对象
-      editForm: this.editData,
+      editForm: Object.assign({}, this.editData),
       // 表单 label 宽度
       formLabelWidth: "80px",
       // 显示对话框
@@ -67,7 +67,7 @@ export default {
      * 监听父组件传递的 editData 编辑数据对象
      */
     editData(newVal) {
-      this.editForm = newVal;
+      this.editForm = Object.assign({}, newVal);
 
     },
     /**
@@ -86,25 +86,26 @@ export default {
      * 对话框中 X 按钮点击关闭事件
      */
     handleClose(done) {
-      this.isVisible = false;
+      // this.isVisible = false;
       this.$emit("closeHandler");
-
+      this.editForm = Object.assign({}, this.editData);
     },
     /**
      * 对话框取消按钮
      */
     cancel() {
       this.$emit("cancelHandler");
-      this.isVisible = false;
-
+      // this.isVisible = false;
+      this.editForm = Object.assign({}, this.editData);
     },
     /**
      * 对话框确定按钮操作
      */
     determine() {
-      this.$emit("determineHnadler");
-      this.isVisible = false;
-
+      // 将修改后的数据发给父组件
+      this.$emit("determineHnadler", this.editForm);
+      // this.isVisible = false;
+      // this.editForm = Object.assign({}, this.editData);
     },
   },
 };
