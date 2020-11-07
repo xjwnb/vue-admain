@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-05 19:38:35
- * @LastEditTime: 2020-11-06 22:09:09
+ * @LastEditTime: 2020-11-07 11:19:52
  * @LastEditors: Please set LastEditors
  * @Description: 表格页
  * @FilePath: \vue-admain\src\views\vab\table\index.vue
@@ -35,6 +35,8 @@ import {
   // 修改用户数据列表
   putUser,
 } from "@/http/userList";
+// 引入日期格式化工具方法
+import { formatDateToYMD } from '@/utils/Date'
 
 export default {
   name: "Table",
@@ -63,7 +65,7 @@ export default {
      */
     getUsers() {
       getUserList().then((res) => {
-        this.tableData = res.data.userList;
+        this.tableData = res.userList;
       });
     },
 
@@ -84,11 +86,20 @@ export default {
      * 对话框中的确定操作
      */
     determineHnadler(afterEditData) {
+      if (
+        Object.prototype.toString.call(afterEditData) === "[object Object]"
+      ) {
+        // 获取编辑数据对象中的日期值
+        let date = afterEditData.date;
+        // 格式化日期并返回
+        let formDate = formatDateToYMD(date.toString());
+        afterEditData.date = formDate;
+        // 发送 put 请求发送编辑数据
+        putUser(afterEditData).then((res) => {
+          console.log("putUser", res);
+        });
+      }
       this.dialogVisible = false;
-      console.log(afterEditData);
-      putUser(afterEditData).then(res => {
-        console.log("putUser", res);
-      })
     },
     /**
      * 触发对话框 X 事件

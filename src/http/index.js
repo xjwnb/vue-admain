@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-04 12:22:36
- * @LastEditTime: 2020-11-04 15:02:53
+ * @LastEditTime: 2020-11-07 10:27:56
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\http\index.js
@@ -20,7 +20,7 @@ function request(options) {
     // 请求拦截器
     instance.interceptors.request.use(
       config => {
-        console.log(config);
+        console.log("request", config);
         return config;
       },
       error => {
@@ -33,7 +33,7 @@ function request(options) {
     instance.interceptors.response.use(
       data => {
         console.log("response", data);
-        return data;
+        return data.data;
       },
       error => {
         console.log(error);
