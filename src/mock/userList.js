@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-04 13:00:05
- * @LastEditTime: 2020-11-06 15:37:00
+ * @LastEditTime: 2020-11-06 22:12:09
  * @LastEditors: Please set LastEditors
  * @Description: Mock 用户列表配置文件
  * @FilePath: \vue-admain\src\mock\index.js
@@ -111,3 +111,14 @@ mock("http://localhost:8080/getUserList", "get", getUserList);
 
 
 console.log("globalUser", globalUser);
+
+// put 修改用户数据
+mock("http://localhost:8080/putUser", "put", function(options) {
+  console.log(options);
+  console.log(JSON.parse(options.body))
+  return {
+    status: 200, 
+    statusText: "OK",
+    data: globalUser
+  }
+})
