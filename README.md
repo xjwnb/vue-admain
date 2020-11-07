@@ -32,11 +32,11 @@
 
   登录页面截图
 
-  ![登录页面](\READMEImage\01.登录\登录页面.png)
+  ![登录页面](https://github.com/xjwnb/vue-admain/blob/masterREADMEImage/01.登录/登录页面.png)
 
   登录页面 GIF 演示
 
-  ![登录](\READMEImage\01.登录\登录.gif)
+  ![登录](https://github.com/xjwnb/vue-admain/blob/master/READMEImage/01.登录/登录.gif)
 
 
 
@@ -44,7 +44,7 @@
 
   注销功能 GIF 演示
 
-  ![注销](\READMEImage\02.注销\注销.gif)
+  ![注销](https://github.com/xjwnb/vue-admain/blob/master/READMEImage/02.注销/注销.gif)
 
 
 
@@ -52,11 +52,11 @@
 
   表格页面截图
 
-  ![表格](\READMEImage\03.表格\表格.png)
+  ![表格](https://github.com/xjwnb/vue-admain/blob/master/READMEImage/03.表格/表格.png)
 
   表格功能 GIF 演示
 
-  ![表格](\READMEImage\03.表格\表格.gif)
+  ![表格](https://github.com/xjwnb/vue-admain/blob/master/READMEImage/03.表格/表格.gif)
 
 
 
