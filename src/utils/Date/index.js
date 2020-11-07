@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-07 10:05:58
- * @LastEditTime: 2020-11-07 11:18:18
+ * @LastEditTime: 2020-11-07 14:49:57
  * @LastEditors: Please set LastEditors
  * @Description: Date 工具方法
  * @FilePath: \vue-admain\src\utils\Date\index.js
@@ -17,7 +17,7 @@ export function formatDateToYMD(date) {
   let y = formatDate.getFullYear();
   let m = formatDate.getMonth() + 1;
   let d = formatDate.getDate();
-  m = m < 10 ? "0" + String(m) : String(m);
-  d = m < 10 ? "0" + String(d) : String(d);
+  m < 10 ? m = "0" + m : m = m;
+  d < 10 ? d = "0" + d : d = d;
   return `${y}-${m}-${d}`;
 }

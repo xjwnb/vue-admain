@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-05 19:38:35
- * @LastEditTime: 2020-11-07 11:19:52
+ * @LastEditTime: 2020-11-07 14:37:29
  * @LastEditors: Please set LastEditors
  * @Description: 表格页
  * @FilePath: \vue-admain\src\views\vab\table\index.vue
@@ -94,9 +94,13 @@ export default {
         // 格式化日期并返回
         let formDate = formatDateToYMD(date.toString());
         afterEditData.date = formDate;
+        console.log("格式化编辑对象后输出", afterEditData);
         // 发送 put 请求发送编辑数据
         putUser(afterEditData).then((res) => {
           console.log("putUser", res);
+          if (res.status === 200 && res.statusText === "OK") {
+            this.tableData = res.data;
+          }
         });
       }
       this.dialogVisible = false;
