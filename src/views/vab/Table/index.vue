@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-05 19:38:35
- * @LastEditTime: 2020-11-07 16:20:31
+ * @LastEditTime: 2020-11-07 16:28:10
  * @LastEditors: Please set LastEditors
  * @Description: 表格页
  * @FilePath: \vue-admain\src\views\vab\table\index.vue
@@ -23,6 +23,7 @@
       :editData="editData" />
     <!-- 用户删除对话框 -->
     <UserDeleteDialog 
+    v-if="deletaData !== null"
       :dialogDeleteVisible="dialogDeleteVisible"
       :deletaData="deletaData"
       @cancelDeleteHandler="cancelDeleteHandler"
