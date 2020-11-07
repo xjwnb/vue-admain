@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-07 14:59:56
- * @LastEditTime: 2020-11-07 18:51:27
+ * @LastEditTime: 2020-11-07 19:54:13
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\components\UserDeleteDialog\index.vue
@@ -49,21 +49,12 @@ export default {
     };
   },
   computed: {
-    /* deleteMsg() {
-      let msg = `确定是否删除 
-            ID：${this.delData.id},
-            name：${this.delData.name}。
-            这条数据？`;
-      return msg;
-    }, */
   },
   watch: {
     /**
      * 监听父组件对是否显示对话框的修改操作,更新 data 中的 isDialogVisible
      */
     dialogDeleteVisible(newValue) {
-      console.log(newValue);
-      console.log(this.delData);
       this.isDialogVisible = newValue;
     },
     /**
@@ -74,27 +65,26 @@ export default {
     },
   },
   created() {
-    console.log(this.dialogDeleteVisible, this.isDialogVisible);
   },
   mounted() {
-    console.log(this.delData);
-    this.$nextTick(() => {
-      console.log("nextTick", this.delData);
-    })
   },
   methods: {
     /**
-     *
+     * 点击 X 按钮
      */
     handleClose() {
       this.$emit("deleteHandleClose");
     },
+    /**
+     * 取消按钮，发送触发事件
+     */
     cancelDelete() {
-      console.log("cancel111");
       this.$emit("cancelDeleteHandler");
     },
+    /**
+     * 确定按钮，发送触发确定删除事件
+     */
     determineDelete() {
-      console.log("delete11111");
       this.$emit("determineDeleteHandler");
     },
   },

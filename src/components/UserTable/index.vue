@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-06 15:03:14
- * @LastEditTime: 2020-11-07 15:34:15
+ * @LastEditTime: 2020-11-07 19:54:44
  * @LastEditors: Please set LastEditors
  * @Description: 表格
  * @FilePath: \vue-admain\src\components\Table\index.vue
@@ -56,7 +56,6 @@ export default {
      * @param {object} deleteData 被点击的编辑行的数据对象
      */
     deleta(deleteData) {
-      console.log(deleteData);
       this.$emit("deleteHandler", deleteData);
     }
   },
