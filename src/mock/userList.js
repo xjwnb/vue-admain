@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-04 13:00:05
- * @LastEditTime: 2020-11-07 14:27:42
+ * @LastEditTime: 2020-11-07 19:46:44
  * @LastEditors: Please set LastEditors
  * @Description: Mock 用户列表配置文件
  * @FilePath: \vue-admain\src\mock\index.js
@@ -20,9 +20,10 @@ import {
   USER_AGE_MAX
 } from "@/const";
 // 引入对象工具方法
-import {
-  getReplaceObjByItem
-} from '@/utils/object'
+import { 
+  // 
+  getReplaceObjByItem,
+  deleteObjByID} from "@/utils/object";
 
 // 用户初始化全局 ID
 let globalID = 0;
@@ -57,7 +58,7 @@ function getUserList() {
  */
 function User(name, age) {
   // ID
-  this.id = ++ globalID;
+  this.id = ++globalID;
   // 用户名
   this.setName(name);
   // 年龄
@@ -113,17 +114,28 @@ function generUserRandom(userCountMin, userCountMax, ageMin, ageMax) {
 // 请求用户数据
 mock("http://localhost:8080/getUserList", "get", getUserList);
 
-
 console.log("globalUser", globalUser);
 
 // put 修改用户数据
 mock("http://localhost:8080/putUser", "put", function(options) {
   let option = JSON.parse(options.body);
   let newUserList = getReplaceObjByItem(globalUser, option);
-  console.log(newUserList);
   return {
-    status: 200, 
+    status: 200,
     statusText: "OK",
     data: newUserList
   };
 });
+
+// delete 删除对应用户数据
+mock("http://localhost:8080/deleteUser", "delete", function(options) {
+  console.log("deleteUser", options);
+  let id = JSON.parse(options.body).id;
+  console.log("deleteUser", id);
+  let afterDeleteUserList = deleteObjByID(globalUser, id);
+  return {
+    status: 200,
+    statusText: "OK",
+    data: afterDeleteUserList
+  };
+})

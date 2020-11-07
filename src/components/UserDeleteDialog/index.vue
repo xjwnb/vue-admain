@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-07 14:59:56
- * @LastEditTime: 2020-11-07 16:52:44
+ * @LastEditTime: 2020-11-07 18:51:27
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\components\UserDeleteDialog\index.vue
@@ -63,6 +63,7 @@ export default {
      */
     dialogDeleteVisible(newValue) {
       console.log(newValue);
+      console.log(this.delData);
       this.isDialogVisible = newValue;
     },
     /**
@@ -72,9 +73,14 @@ export default {
       this.delData = newValue;
     },
   },
-  created() {},
+  created() {
+    console.log(this.dialogDeleteVisible, this.isDialogVisible);
+  },
   mounted() {
     console.log(this.delData);
+    this.$nextTick(() => {
+      console.log("nextTick", this.delData);
+    })
   },
   methods: {
     /**

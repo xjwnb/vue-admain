@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-07 12:31:42
- * @LastEditTime: 2020-11-07 14:28:28
+ * @LastEditTime: 2020-11-07 19:20:14
  * @LastEditors: Please set LastEditors
  * @Description: 对象工具方法
  * @FilePath: \vue-admain\src\utils\object\index.js
@@ -24,6 +24,19 @@ export function getReplaceObjByItem(replacedObj, replaceItem) {
   return newObj;
 }
 
-let a = [{id: 1, name: 'xkc'}, {id: 2, name: 'zzx'}];
-let b = {id: 2, name:"蜘蛛侠"};
-getReplaceObjByItem(a, b);
+/**
+ * 通过 id 属性删除数组对象属性相同的 id 索引，并返回删除后的数组
+ * @param {object} obj 包含 id 属性的对象数组
+ * @param {number} id 要删除的 id 属性值
+ */
+export function deleteObjByID(obj, id) {
+  let index = obj.findIndex(item => {
+    if (item.id === id) {
+      return true;
+    }
+  });
+  obj.splice(index, 1);
+  return obj;
+};
+let a = [{id:1, name: '小卡车'}, {id: 5, name: '蜘蛛侠'}];
+console.log(deleteObjByID(a, 5));
