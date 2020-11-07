@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-06 15:03:14
- * @LastEditTime: 2020-11-06 21:19:56
+ * @LastEditTime: 2020-11-07 15:34:15
  * @LastEditors: Please set LastEditors
  * @Description: 表格
  * @FilePath: \vue-admain\src\components\Table\index.vue
@@ -18,7 +18,7 @@
           <el-button type="primary" @click="edit(tableData.row)"
             >编辑</el-button
           >
-          <el-button type="danger">删除</el-button>
+          <el-button type="danger" @click="deleta(tableData.row)">删除</el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -51,6 +51,14 @@ export default {
     edit(editData) {
       this.$emit("editHnadler", editData);
     },
+    /**
+     * 获取数据并触发事件将被删除的数据传给父组件
+     * @param {object} deleteData 被点击的编辑行的数据对象
+     */
+    deleta(deleteData) {
+      console.log(deleteData);
+      this.$emit("deleteHandler", deleteData);
+    }
   },
 };
 </script>

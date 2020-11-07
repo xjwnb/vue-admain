@@ -1,23 +1,33 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-05 19:38:35
- * @LastEditTime: 2020-11-07 14:37:29
+ * @LastEditTime: 2020-11-07 16:20:31
  * @LastEditors: Please set LastEditors
  * @Description: 表格页
  * @FilePath: \vue-admain\src\views\vab\table\index.vue
 -->
+
 <template>
   <div class="table">
+    
     <!-- 用户列表表格 -->
-    <UserTable :tableData="tableData" @editHnadler="editHnadler" />
+    <UserTable :tableData="tableData" @editHnadler="editHnadler" @deleteHandler="deleteHandler" />
+    <!-- 用户编辑对话框 -->
     <UserDialog
       v-if="editData !== null"
       :dialogVisible="dialogVisible"
       @cancelHandler="cancelHandler"
       @determineHnadler="determineHnadler"
       @closeHandler="closeHandler"
-      :editData="editData"
-    />
+      @deleteHandler="deleteHandler"
+      :editData="editData" />
+    <!-- 用户删除对话框 -->
+    <UserDeleteDialog 
+      :dialogDeleteVisible="dialogDeleteVisible"
+      :deletaData="deletaData"
+      @cancelDeleteHandler="cancelDeleteHandler"
+      @determineDeleteHandler="determineDeleteHandler"
+      @deleteHandleClose="deleteHandleClose" />
   </div>
 </template>
 
@@ -26,8 +36,10 @@
 import {
   // 用户表格
   UserTable,
-  // 用户对话框
+  // 用户编辑对话框
   UserDialog,
+  // 用户删除对话框
+  UserDeleteDialog
 } from "@/components";
 import {
   // 获取调用用户数据列表的 http 方法
@@ -43,15 +55,20 @@ export default {
   components: {
     UserTable,
     UserDialog,
+    UserDeleteDialog
   },
   data() {
     return {
       // 用户列表数组
       tableData: [],
-      // 是否显示对话框
+      // 是否显示编辑对话框
       dialogVisible: false,
+      // 是否显示删除对话框
+      dialogDeleteVisible: false,
       // 被编辑的数据
       editData: null,
+      // 被删除的数据
+      deletaData: null,
     };
   },
   created() {},
@@ -111,9 +128,24 @@ export default {
     closeHandler() {
       this.dialogVisible = false;
     },
+    deleteHandler(data) {
+      this.deletaData = data;
+      this.dialogDeleteVisible = true;
+    },
+    deleteHandleClose() {
+      this.dialogDeleteVisible = false;
+    },
+    cancelDeleteHandler() {
+      this.dialogDeleteVisible = false;
+    },
+    determineDeleteHandler() {
+      this.dialogDeleteVisible = false;
+    },
+    
   },
 };
 </script>
+
 <style scoped>
 .table {
   padding: 2rem;
