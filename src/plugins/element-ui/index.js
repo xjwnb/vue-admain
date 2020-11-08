@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-03 21:08:56
- * @LastEditTime: 2020-11-06 20:38:21
+ * @LastEditTime: 2020-11-08 16:23:20
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\plugins\elementUI.js
@@ -32,7 +32,8 @@ import {
   Dialog,
   DatePicker,
   Message,
-  MessageBox
+  MessageBox,
+  Notification
 } from "element-ui";
 
 const element = {
@@ -66,6 +67,7 @@ const element = {
     Vue.prototype.$alert = MessageBox.alert;
     Vue.prototype.$confirm = MessageBox.confirm;
     Vue.prototype.$prompt = MessageBox.prompt;
+    Vue.prototype.$notify = Notification;
   }
 };
 

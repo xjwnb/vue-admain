@@ -1,13 +1,15 @@
 /*
  * @Author: your name
  * @Date: 2020-11-03 18:13:40
- * @LastEditTime: 2020-11-06 15:37:48
+ * @LastEditTime: 2020-11-08 16:12:41
  * @LastEditors: Please set LastEditors
  * @Description: Vue 文件入口文件
  * @FilePath: \vue-admain\src\main.js
  */
 import Vue from "vue";
 import App from "./App.vue";
+// 引入 clipboard
+import clipboard from 'clipboard';
 // 引入 icon
 import '@/assets/icon/iconfont.css';
 // 引入全局样式
@@ -31,6 +33,8 @@ Vue.use(element);
 Vue.prototype.$store = store;
 // 设置 localStorage
 Vue.prototype.$localStorage = window.localStorage;
+// 设置 clipboard
+Vue.prototype.$clipboard = clipboard;
 
 Vue.config.productionTip = false;
 
