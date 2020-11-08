@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-04 13:00:05
- * @LastEditTime: 2020-11-08 12:57:55
+ * @LastEditTime: 2020-11-08 23:26:15
  * @LastEditors: Please set LastEditors
  * @Description: Mock 用户列表配置文件
  * @FilePath: \vue-admain\src\mock\index.js
@@ -148,10 +148,11 @@ mock("http://localhost:8080/postUser", "post", function(options) {
   
   // 拷贝一份用户数据
   let copyUser = Object.assign({}, data.user);
-  // 获得用户对象数组长度
-  let userLength = globalUser.length;
+  // 获得最后一个用户的 Id 属性
+  let lastId = globalUser[globalUser.length - 1].id;
+  console.log(lastId);
   // 设置 id 属性
-  copyUser.id = userLength + 1;
+  copyUser.id = lastId + 1;
   // 实例化用户实例，并且传入用户名和年龄
   let addUser = new User(copyUser.name, copyUser.age);
   // 修改用户实例中的 id
