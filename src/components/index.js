@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-06 15:05:53
- * @LastEditTime: 2020-11-08 10:24:22
+ * @LastEditTime: 2020-11-08 17:44:57
  * @LastEditors: Please set LastEditors
  * @Description: 统一进行组件导出
  * @FilePath: \vue-admain\src\components\index.js
@@ -19,3 +19,10 @@ export const UserDialog = () => import("./UserDialog/index.vue");
 export const UserDeleteDialog = () => import("./UserDeleteDialog/index.vue");
 // 用户添加数据对话框
 export const UserAddDialog = () => import("./UserAddDialog/index.vue");
+
+/**
+ * @/views/vab/Color
+ * Color 颜色页面
+ */
+// ColorDiv 颜色块
+export const ColorDiv = () => import("./ColorDiv/index.vue");
