@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-04 13:00:05
- * @LastEditTime: 2020-11-07 19:59:13
+ * @LastEditTime: 2020-11-08 12:57:55
  * @LastEditors: Please set LastEditors
  * @Description: Mock 用户列表配置文件
  * @FilePath: \vue-admain\src\mock\index.js
@@ -81,6 +81,9 @@ User.prototype.setAge = function(newAge) {
 User.prototype.getID = function() {
   return this.id;
 };
+User.prototype.setID = function(newID) {
+  this.id = newID;
+};
 User.prototype.getDate = function() {
   return this.date;
 };
@@ -135,5 +138,32 @@ mock("http://localhost:8080/deleteUser", "delete", function(options) {
     status: 200,
     statusText: "OK",
     data: afterDeleteUserList
+  };
+});
+
+// post 添加用户数据
+mock("http://localhost:8080/postUser", "post", function(options) {
+  // 将JSON字符串转化为 JSON
+  let data = JSON.parse(options.body);
+  
+  // 拷贝一份用户数据
+  let copyUser = Object.assign({}, data.user);
+  // 获得用户对象数组长度
+  let userLength = globalUser.length;
+  // 设置 id 属性
+  copyUser.id = userLength + 1;
+  // 实例化用户实例，并且传入用户名和年龄
+  let addUser = new User(copyUser.name, copyUser.age);
+  // 修改用户实例中的 id
+  addUser.setID(copyUser.id);
+  // 修改用户实例中的日期
+  addUser.setDate(copyUser.date);
+  // 将实例添加到用户对象数组中
+  globalUser.push(addUser);
+  // 返回响应请求数据
+  return {
+    status: 201,
+    statusText: "OK",
+    data: globalUser
   };
 })
