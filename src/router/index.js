@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-03 18:13:40
- * @LastEditTime: 2020-11-06 11:47:07
+ * @LastEditTime: 2020-11-08 14:38:17
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\router\index.js
@@ -49,6 +49,12 @@ const routes = [
         name: "table",
         meta: { pathName: "表格" },
         component: () => import("@/views/vab/Table/index.vue")
+      },
+      {
+        path: "color",
+        name: "color",
+        meta: { pathName: "颜色" },
+        component: () => import("@/views/vab/Color/index.vue")
       },
       {
         path: "about",
