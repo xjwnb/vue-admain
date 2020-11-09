@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-06 15:05:53
- * @LastEditTime: 2020-11-08 17:44:57
+ * @LastEditTime: 2020-11-09 11:02:34
  * @LastEditors: Please set LastEditors
  * @Description: 统一进行组件导出
  * @FilePath: \vue-admain\src\components\index.js
@@ -26,3 +26,10 @@ export const UserAddDialog = () => import("./UserAddDialog/index.vue");
  */
 // ColorDiv 颜色块
 export const ColorDiv = () => import("./ColorDiv/index.vue");
+
+/**
+ * @/views/vab/Progress
+ * Progress 进度条页面
+ */
+// ProgressDiv 进度条块
+export const ProgressDiv = () => import("./ProgressDiv/index.vue");

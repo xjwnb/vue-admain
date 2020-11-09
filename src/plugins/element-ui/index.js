@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-03 21:08:56
- * @LastEditTime: 2020-11-08 16:23:20
+ * @LastEditTime: 2020-11-09 11:01:00
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\plugins\elementUI.js
@@ -31,6 +31,7 @@ import {
   TableColumn,
   Dialog,
   DatePicker,
+  Progress,
   Message,
   MessageBox,
   Notification
@@ -61,6 +62,7 @@ const element = {
     Vue.use(TableColumn);
     Vue.use(Dialog);
     Vue.use(DatePicker);
+    Vue.use(Progress);
 
     Vue.prototype.$message = Message;
     Vue.prototype.$msgbox = MessageBox;
