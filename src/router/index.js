@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-03 18:13:40
- * @LastEditTime: 2020-11-09 10:43:42
+ * @LastEditTime: 2020-11-09 15:47:52
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\router\index.js
@@ -28,6 +28,12 @@ const routes = [
         name: "index",
         meta: { pathName: "首页" },
         component: () => import("@/views/index/index.vue")
+      },
+      {
+        path: "about",
+        name: "about",
+        meta: { pathName: "关于" },
+        component: () => import("@/views/About.vue")
       }
     ]
     /*     name: 'Home',*/
@@ -61,15 +67,10 @@ const routes = [
         name: "progress",
         meta: { pathName: "进度条" },
         component: () => import("@/views/vab/Progress/index.vue")
-      },
-      {
-        path: "about",
-        name: 'about',
-        meta: { pathName: "关于" },
-        component: () => import("@/views/About.vue")
       }
     ]
-  },
+  }
+
   // {
   //   path: "/about",
   //   name: "About",
