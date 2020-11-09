@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-08 17:37:11
- * @LastEditTime: 2020-11-08 23:16:19
+ * @LastEditTime: 2020-11-09 10:56:00
  * @LastEditors: Please set LastEditors
  * @Description: ColorDiv 组件
  * @FilePath: \vue-admain\src\components\ColorDiv\index.vue
@@ -38,6 +38,7 @@ export default {
   flex: 20%;
   width: 100%;
   height: 100px;
+  min-width: 100px;
   display: flex;
   justify-content: center;
   align-items: center;

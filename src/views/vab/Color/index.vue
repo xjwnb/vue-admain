@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-08 14:29:14
- * @LastEditTime: 2020-11-08 22:38:23
+ * @LastEditTime: 2020-11-09 10:55:21
  * @LastEditors: Please set LastEditors
  * @Description: Color 页面
  * @FilePath: \vue-admain\src\views\vab\Color\index.vue
@@ -39,7 +39,8 @@ export default {
     };
   },
   created() {},
-  mounted() {},
+  mounted() {
+  },
   methods: {
     /**
      * 事件代理点击事件,获取复制文本之后并且返回提示通知
