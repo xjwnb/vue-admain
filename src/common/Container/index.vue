@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-05 14:08:37
- * @LastEditTime: 2020-11-06 16:34:33
+ * @LastEditTime: 2020-11-09 15:38:10
  * @LastEditors: Please set LastEditors
  * @Description: 布局容器
  * @FilePath: \vue-admain\src\common\Container\index.vue
@@ -39,6 +39,9 @@ export default {
   },
   created() {},
   mounted() {},
+  destroyed() {},
+  beforeUpdate() {},
+  updated() {},
 };
 </script>
 <style scoped>
