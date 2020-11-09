@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-05 20:04:59
- * @LastEditTime: 2020-11-09 15:46:17
+ * @LastEditTime: 2020-11-09 23:48:35
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\mock\navBar\index.js
@@ -39,6 +39,13 @@ export const navbarList = [
         path: "/vab/progress",
         icon: "iconfont icon-jindutiao",
         title: "进度条",
+        children: null
+      },
+      {
+        id: "2-4",
+        path: "/vab/timeline",
+        icon: "iconfont icon-jindutiao",
+        title: "时间线",
         children: null
       }
     ]

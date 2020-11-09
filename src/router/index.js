@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-03 18:13:40
- * @LastEditTime: 2020-11-09 15:47:52
+ * @LastEditTime: 2020-11-09 23:47:55
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\router\index.js
@@ -67,6 +67,12 @@ const routes = [
         name: "progress",
         meta: { pathName: "进度条" },
         component: () => import("@/views/vab/Progress/index.vue")
+      },
+      {
+        path: "timeline",
+        name: "timeline",
+        meta: { pathName: "时间线" },
+        component: () => import("@/views/vab/Timeline/index.vue")
       }
     ]
   }
