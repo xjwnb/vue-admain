@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-09 10:41:51
- * @LastEditTime: 2020-11-09 13:36:31
+ * @LastEditTime: 2020-11-09 13:38:23
  * @LastEditors: Please set LastEditors
  * @Description: Progress 页面
  * @FilePath: \vue-admain\src\views\vab\Progress\index.vue
@@ -38,38 +38,16 @@ export default {
   },
   data() {
     return {
-      numberStart: 0,
-      numberLast: 60,
       progressList: progressList,
     };
   },
   computed: {
-    numInterval() {
-      let time = window.setInterval(() => {
-        clearInterval(time);
-        this.numberStart += 1;
-        if (this.numberStart > this.numberLast) {
-          clearInterval(time);
-          this.numberStart = this.numberLast;
-        }
-      }, 50);
-      return this.numberStart;
-    },
   },
   created() {},
   mounted() {
-    console.log(progressList);
   },
   methods: {
-    customColorMethod() {
-      if (percentage < 30) {
-        return "#909399";
-      } else if (percentage < 70) {
-        return "#e6a23c";
-      } else {
-        return "#67c23a";
-      }
-    },
+    
   },
 };
 </script>

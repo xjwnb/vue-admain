@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-09 11:33:36
- * @LastEditTime: 2020-11-09 13:29:14
+ * @LastEditTime: 2020-11-09 13:39:05
  * @LastEditors: Please set LastEditors
  * @Description: 进度条对象数据
  * @FilePath: \vue-admain\src\mock\progress\index.js
@@ -65,43 +65,4 @@ export const progressList = {
       status: "exception"
     }
   ],
-  // custom_progress: [
-  //   {
-  //     id: "3-1",
-  //     startNumber: 0,
-  //     lastNumber: 100,
-  //     color: "#00a8ff"
-  //   },
-  //   {
-  //     id: "3-2",
-  //     startNumber: 0,
-  //     lastNumber: 100,
-  //     // color: 
-  //   },
-  //   {
-  //     id: "3-3",
-  //     startNumber: 0,
-  //     lastNumber: 100,
-  //     /* color: [
-  //       { color: "#f56c6c", percentage: 20 },
-  //       { color: "#e6a23c", percentage: 40 },
-  //       { color: "#5cb87a", percentage: 60 },
-  //       { color: "#1989fa", percentage: 80 },
-  //       { color: "#6f7ad3", percentage: 100 }
-  //     ] */
-  //   }
-  // ]
 };
-
-/**
- * 自定义颜色方法
- */
-function customColorMethod() {
-  if (percentage < 30) {
-    return "#909399";
-  } else if (percentage < 70) {
-    return "#e6a23c";
-  } else {
-    return "#67c23a";
-  }
-}
