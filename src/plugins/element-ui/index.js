@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-03 21:08:56
- * @LastEditTime: 2020-11-09 11:01:00
+ * @LastEditTime: 2020-11-10 14:04:30
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\plugins\elementUI.js
@@ -32,9 +32,12 @@ import {
   Dialog,
   DatePicker,
   Progress,
+  Collapse,
+  CollapseItem,
   Message,
   MessageBox,
-  Notification
+  Notification,
+  Loading
 } from "element-ui";
 
 const element = {
@@ -63,6 +66,8 @@ const element = {
     Vue.use(Dialog);
     Vue.use(DatePicker);
     Vue.use(Progress);
+    Vue.use(Collapse);
+    Vue.use(CollapseItem);
 
     Vue.prototype.$message = Message;
     Vue.prototype.$msgbox = MessageBox;
@@ -70,6 +75,7 @@ const element = {
     Vue.prototype.$confirm = MessageBox.confirm;
     Vue.prototype.$prompt = MessageBox.prompt;
     Vue.prototype.$notify = Notification;
+    Vue.prototype.$loading = Loading;
   }
 };
 

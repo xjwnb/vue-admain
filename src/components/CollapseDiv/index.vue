@@ -1,0 +1,38 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-11-10 12:41:43
+ * @LastEditTime: 2020-11-10 13:56:43
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \vue-admain\src\components\CollapseDiv\index.vue
+-->
+<template>
+  <el-collapse v-model="activeName" accordion>
+    <el-collapse-item :title="collapseData.title" :name="collapseData.id">
+      <div>
+        {{ collapseData.body }}
+      </div>
+    </el-collapse-item>
+  </el-collapse>
+</template>
+
+<script>
+export default {
+  name: "collapse-div",
+  props: {
+    collapse_data: {
+      type: Object
+    }
+  },
+  data() {
+    return {
+      collapseData: this.collapse_data,
+      activeName: 1
+    };
+  },
+  created() {},
+  mounted() {},
+};
+</script>
+<style scoped>
+</style>

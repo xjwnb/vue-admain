@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-03 18:13:40
- * @LastEditTime: 2020-11-09 14:54:31
+ * @LastEditTime: 2020-11-10 13:10:08
  * @LastEditors: Please set LastEditors
  * @Description: Vue 文件入口文件
  * @FilePath: \vue-admain\src\main.js
@@ -26,6 +26,8 @@ import element from "@/plugins/element-ui";
 import "@/mock/userList";
 // 引入 animejs 动画库
 import anime from "animejs";
+// 引入 axios 
+import axios from 'axios';
 
 // 安装 element 插件
 Vue.use(element);
@@ -38,6 +40,8 @@ Vue.prototype.$localStorage = window.localStorage;
 Vue.prototype.$clipboard = clipboard;
 // 设置 anime 动画库
 Vue.prototype.$anime = anime;
+// 设置 axios 
+Vue.prototype.$axios = axios;
 
 Vue.config.productionTip = false;
 

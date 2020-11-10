@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-06 15:05:53
- * @LastEditTime: 2020-11-09 11:02:34
+ * @LastEditTime: 2020-11-10 12:44:30
  * @LastEditors: Please set LastEditors
  * @Description: 统一进行组件导出
  * @FilePath: \vue-admain\src\components\index.js
@@ -33,3 +33,10 @@ export const ColorDiv = () => import("./ColorDiv/index.vue");
  */
 // ProgressDiv 进度条块
 export const ProgressDiv = () => import("./ProgressDiv/index.vue");
+
+
+/**
+ * @/views/vab/Collapse
+ * Collapse 折叠面板
+ */
+export const CollapseDiv = () => import("./CollapseDiv/index.vue");
