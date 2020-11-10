@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-06 15:05:53
- * @LastEditTime: 2020-11-10 12:44:30
+ * @LastEditTime: 2020-11-10 23:34:03
  * @LastEditors: Please set LastEditors
  * @Description: 统一进行组件导出
  * @FilePath: \vue-admain\src\components\index.js
@@ -34,6 +34,14 @@ export const ColorDiv = () => import("./ColorDiv/index.vue");
 // ProgressDiv 进度条块
 export const ProgressDiv = () => import("./ProgressDiv/index.vue");
 
+/**
+ * @/views/vab/Timeline
+ * Timeline 时间线页面
+ */
+// TimelineDiv 时间线块
+export const TimelineDiv = () => import("./TimelineDiv/index.vue");
+// TimelineCustom 自定义时间线
+export const TimelineCustom = () => import("./TimelineCustom/index.vue");
 
 /**
  * @/views/vab/Collapse

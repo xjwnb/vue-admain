@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-03 21:08:56
- * @LastEditTime: 2020-11-10 15:08:32
+ * @LastEditTime: 2020-11-10 23:37:17
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\plugins\elementUI.js
@@ -34,6 +34,11 @@ import {
   Progress,
   Collapse,
   CollapseItem,
+  Timeline,
+  TimelineItem,
+  RadioGroup,
+  Radio,
+  Card,
   Message,
   MessageBox,
   Notification,
@@ -68,6 +73,11 @@ const element = {
     Vue.use(Progress);
     Vue.use(Collapse);
     Vue.use(CollapseItem);
+    Vue.use(Timeline);
+    Vue.use(TimelineItem);
+    Vue.use(Radio);
+    Vue.use(RadioGroup);
+    Vue.use(Card);
 
     Vue.prototype.$message = Message;
     Vue.prototype.$msgbox = MessageBox;

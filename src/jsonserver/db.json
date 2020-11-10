@@ -1,0 +1,28 @@
+{
+  "commitRecord": [
+    {
+      "id": 1,
+      "username": "小卡车",
+      "content": "创建 vue-admin 项目",
+      "timestamp": "2020-11-03 00:00:00"
+    },
+    {
+      "id": 2,
+      "username": "小卡车",
+      "content": "完成登录功能",
+      "timestamp": "2020-11-04 00:00:00"
+    },
+    {
+      "id": 3,
+      "username": "小卡车",
+      "content": "完成注册功能",
+      "timestamp": "2020-11-05 00:00:00"
+    },
+    {
+      "id": 4,
+      "username": "小卡车",
+      "content": "完成表格功能",
+      "timestamp": "2020-11-06 00:00:00"
+    }
+  ]
+}
