@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-09 16:30:36
- * @LastEditTime: 2020-11-09 16:37:00
+ * @LastEditTime: 2020-11-10 16:18:21
  * @LastEditors: Please set LastEditors
  * @Description: 关于数据
  * @FilePath: \vue-admain\src\mock\about\index.js
@@ -29,6 +29,11 @@ export const aboutMsg = {
       id: 4,
       name: "Mockjs",
       src: "http://mockjs.com/"
+    },
+    {
+      id: 5,
+      name: "JSONPlaceholder",
+      src: "http://jsonplaceholder.typicode.com/"
     }
   ]
 }

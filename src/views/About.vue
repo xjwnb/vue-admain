@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-03 18:13:40
- * @LastEditTime: 2020-11-09 17:57:04
+ * @LastEditTime: 2020-11-10 16:20:55
  * @LastEditors: Please set LastEditors
  * @Description: 关于页面
  * @FilePath: \vue-admain\src\views\About.vue
@@ -59,14 +59,16 @@ h4 {
 .technology {
   margin-top: 2rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   background-color: ＃1abc9c;
 }
 .tech {
   cursor: pointer;
-  width: 20%;
+  width: 200px;
   height: 100px;
   line-height: 100px;
   background-color: aquamarine;
+  margin-bottom: 10px;
 }
 </style>
