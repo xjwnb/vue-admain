@@ -1,16 +1,18 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-10 12:00:26
- * @LastEditTime: 2020-11-10 14:49:12
+ * @LastEditTime: 2020-11-10 15:58:42
  * @LastEditors: Please set LastEditors
  * @Description: Collapse 折叠面板 页面
  * @FilePath: \vue-admain\src\views\vab\Collapse\index.vue
 -->
 <template>
   <div id="collapse">
-    <template v-for="collapse in collapseData" v-key="collapse.id">
-      <CollapseDiv :collapse_data="collapse" />
-    </template>
+    <el-collapse v-model="activeName" accordion>
+      <template v-for="collapse in collapseData" v-key="collapse.id">
+        <CollapseDiv :collapse_data="collapse" />
+      </template>
+    </el-collapse>
   </div>
 </template>
 
@@ -28,6 +30,8 @@ export default {
       collapseData: null,
       // Loading 控制
       isloading: null,
+      // 触发的 name
+      activeName: 1
     };
   },
   created() {},
@@ -36,7 +40,7 @@ export default {
     let collapseData = await this.getJsonplaceholderData();
     // 确认数据状态
     if (Object.prototype.toString.call(collapseData) !== "[object Error]") {
-      // 将获取的数据赋值给 data 中的 collapseData 
+      // 将获取的数据赋值给 data 中的 collapseData
       this.collapseData = collapseData;
     }
     this.$nextTick(() => {
@@ -49,8 +53,8 @@ export default {
      * 控制 Loading
      */
     loadingShow() {
-      let loading = this.$loading.service({
-        fullscreen: true,
+      let loading = this.$loading({
+        // fullscreen: true,
         text: "Loading",
         spinner: "el-icon-loading",
         background: "rgba(0, 0, 0, 0.7)",

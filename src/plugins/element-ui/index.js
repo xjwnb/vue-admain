@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-03 21:08:56
- * @LastEditTime: 2020-11-10 14:04:30
+ * @LastEditTime: 2020-11-10 15:08:32
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\plugins\elementUI.js
@@ -75,7 +75,7 @@ const element = {
     Vue.prototype.$confirm = MessageBox.confirm;
     Vue.prototype.$prompt = MessageBox.prompt;
     Vue.prototype.$notify = Notification;
-    Vue.prototype.$loading = Loading;
+    Vue.prototype.$loading = Loading.service;
   }
 };
 
