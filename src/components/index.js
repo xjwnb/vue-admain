@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-06 15:05:53
- * @LastEditTime: 2020-11-10 23:34:03
+ * @LastEditTime: 2020-11-11 16:35:48
  * @LastEditors: Please set LastEditors
  * @Description: 统一进行组件导出
  * @FilePath: \vue-admain\src\components\index.js
@@ -48,3 +48,10 @@ export const TimelineCustom = () => import("./TimelineCustom/index.vue");
  * Collapse 折叠面板
  */
 export const CollapseDiv = () => import("./CollapseDiv/index.vue");
+
+/**
+ * @/views/vab/Carousel
+ * Carousel 跑马灯页面
+ */
+// 跑马灯组件
+export const CarouselDiv = () => import("./CarouselDiv/index.vue");

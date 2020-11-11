@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-03 18:13:40
- * @LastEditTime: 2020-11-10 12:02:00
+ * @LastEditTime: 2020-11-11 16:06:38
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\router\index.js
@@ -79,6 +79,12 @@ const routes = [
         name: "collapse",
         meta: { pathName: "折叠面板" },
         component: () => import("@/views/vab/Collapse/index.vue")
+      },
+      {
+        path: "carousel",
+        name: "carousel",
+        meta: { pathName: "跑马灯" },
+        component: () => import("@/views/vab/Carousel/index.vue")
       }
     ]
   }

@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-05 20:04:59
- * @LastEditTime: 2020-11-10 12:09:42
+ * @LastEditTime: 2020-11-11 16:07:11
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\mock\navBar\index.js
@@ -53,6 +53,13 @@ export const navbarList = [
         path: "/vab/collapse",
         icon: "iconfont icon-jindutiao",
         title: "折叠面板",
+        children: null
+      },
+      {
+        id: "2-6",
+        path: "/vab/carousel",
+        icon: "iconfont icon-jindutiao",
+        title: "跑马灯",
         children: null
       }
     ]

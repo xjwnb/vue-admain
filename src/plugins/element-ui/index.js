@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-03 21:08:56
- * @LastEditTime: 2020-11-10 23:37:17
+ * @LastEditTime: 2020-11-11 16:38:00
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\plugins\elementUI.js
@@ -39,6 +39,8 @@ import {
   RadioGroup,
   Radio,
   Card,
+  Carousel,
+  CarouselItem,
   Message,
   MessageBox,
   Notification,
@@ -78,6 +80,8 @@ const element = {
     Vue.use(Radio);
     Vue.use(RadioGroup);
     Vue.use(Card);
+    Vue.use(Carousel);
+    Vue.use(CarouselItem);
 
     Vue.prototype.$message = Message;
     Vue.prototype.$msgbox = MessageBox;
