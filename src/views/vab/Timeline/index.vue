@@ -1,13 +1,14 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-09 23:46:27
- * @LastEditTime: 2020-11-11 14:11:46
+ * @LastEditTime: 2020-11-11 14:16:21
  * @LastEditors: Please set LastEditors
  * @Description: 时间线页面
  * @FilePath: \vue-admain\src\views\vab\Timeline\index.vue
 -->
 <template>
   <div id="timelines">
+    <h1>项目开发时间线进度</h1>
     <!-- 提交表单 -->
     <div class="commitInput">
       <el-form
@@ -151,6 +152,11 @@ export default {
 </script>
 
 <style scoped>
+h1 {
+  text-align: center;
+  text-shadow: 1px 2px 2px aquamarine;
+  font-size: 2rem;
+}
 .timeline {
   display: flex;
   justify-content: space-around;
@@ -176,5 +182,6 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
+  margin-top: 2rem;
 }
 </style>
