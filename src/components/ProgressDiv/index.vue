@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-09 10:59:26
- * @LastEditTime: 2020-11-09 13:31:54
+ * @LastEditTime: 2020-11-11 17:44:49
  * @LastEditors: Please set LastEditors
  * @Description: 进度条组件
  * @FilePath: \vue-admain\src\components\ProgressDiv\index.vue
@@ -64,5 +64,8 @@ export default {
 <style scoped>
 .progress-div {
   margin-bottom: 1rem;
+}
+.progress-div:last-child {
+  margin-bottom: 0;
 }
 </style>

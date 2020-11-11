@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-09 10:41:51
- * @LastEditTime: 2020-11-11 14:08:25
+ * @LastEditTime: 2020-11-11 17:44:11
  * @LastEditors: Please set LastEditors
  * @Description: Progress 页面
  * @FilePath: \vue-admain\src\views\vab\Progress\index.vue
@@ -51,5 +51,8 @@ export default {
 <style scoped>
 .progress_group {
   margin-bottom: 2rem;
+}
+.progress_group:last-child {
+  margin-bottom: 0;
 }
 </style>
