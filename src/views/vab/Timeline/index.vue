@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-09 23:46:27
- * @LastEditTime: 2020-11-11 14:06:54
+ * @LastEditTime: 2020-11-11 14:11:46
  * @LastEditors: Please set LastEditors
  * @Description: 时间线页面
  * @FilePath: \vue-admain\src\views\vab\Timeline\index.vue
@@ -117,13 +117,15 @@ export default {
     },
 
     /**
-     * 提交按钮
+     * 提交按钮，发送 post 请求事件
      */
     commitHandler() {
+      // 判断输入框是否为空
       if (this.commitForm.commitContent !== "") {
+        // 获取事件并且格式化
         let date = new Date();
         let formDate = `${formatDateToYMD(date)} ${getHourMinuteSecond(date)}`;
-        console.log(formDate);
+        // 发送 post 网络请求提交数据
         this.$axios
           .post("http://localhost:3000/commitRecord", {
             username: "小卡车",
@@ -131,10 +133,9 @@ export default {
             timestamp: formDate,
           })
           .then((res) => {
-            console.log(res);
+            // 获取数据
             if (res.status === 201) {
               this.timelineData.unshift(res.data);
-              console.log(this.timelineData);
               this.commitForm.commitContent = "";
             }
           });

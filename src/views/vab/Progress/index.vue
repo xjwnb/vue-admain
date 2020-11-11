@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-09 10:41:51
- * @LastEditTime: 2020-11-09 13:38:23
+ * @LastEditTime: 2020-11-11 14:08:25
  * @LastEditors: Please set LastEditors
  * @Description: Progress 页面
  * @FilePath: \vue-admain\src\views\vab\Progress\index.vue
@@ -12,15 +12,15 @@
       class="progress_group"
       v-for="(progresses, progressName) in progressList"
     >
-      <template v-for="progress in progresses" v-key="progress.id">
-        <ProgressDiv
-          :startNumber="progress.startNumber"
-          :lastNumber="progress.lastNumber"
-          :status="progress.status"
-          :text_inside="progress.text_inside"
-          :stroke_width="progress.stroke_width"
-        />
-      </template>
+      <ProgressDiv
+        v-for="progress in progresses"
+        :key="progress.id"
+        :startNumber="progress.startNumber"
+        :lastNumber="progress.lastNumber"
+        :status="progress.status"
+        :text_inside="progress.text_inside"
+        :stroke_width="progress.stroke_width"
+      />
     </div>
   </div>
 </template>
@@ -41,14 +41,10 @@ export default {
       progressList: progressList,
     };
   },
-  computed: {
-  },
+  computed: {},
   created() {},
-  mounted() {
-  },
-  methods: {
-    
-  },
+  mounted() {},
+  methods: {},
 };
 </script>
 

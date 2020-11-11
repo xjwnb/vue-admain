@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-08 14:29:14
- * @LastEditTime: 2020-11-09 10:55:21
+ * @LastEditTime: 2020-11-11 14:09:10
  * @LastEditors: Please set LastEditors
  * @Description: Color 页面
  * @FilePath: \vue-admain\src\views\vab\Color\index.vue
@@ -9,9 +9,7 @@
 <template>
   <div class="color" @click="clickHandler">
     <div class="color-group" v-for="(colors, colorName, index) in colorList">
-      <template v-for="color in colors" v-key="color.id">
-        <ColorDiv :color="color.color" />
-      </template>
+      <ColorDiv v-for="color in colors" :key="color.id" :color="color.color" />
     </div>
     <ColorDiv />
   </div>
@@ -39,8 +37,7 @@ export default {
     };
   },
   created() {},
-  mounted() {
-  },
+  mounted() {},
   methods: {
     /**
      * 事件代理点击事件,获取复制文本之后并且返回提示通知

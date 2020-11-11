@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-10 12:00:26
- * @LastEditTime: 2020-11-10 15:58:42
+ * @LastEditTime: 2020-11-11 14:09:35
  * @LastEditors: Please set LastEditors
  * @Description: Collapse 折叠面板 页面
  * @FilePath: \vue-admain\src\views\vab\Collapse\index.vue
@@ -9,9 +9,11 @@
 <template>
   <div id="collapse">
     <el-collapse v-model="activeName" accordion>
-      <template v-for="collapse in collapseData" v-key="collapse.id">
-        <CollapseDiv :collapse_data="collapse" />
-      </template>
+      <CollapseDiv
+        v-for="collapse in collapseData"
+        :key="collapse.id"
+        :collapse_data="collapse"
+      />
     </el-collapse>
   </div>
 </template>
@@ -31,7 +33,7 @@ export default {
       // Loading 控制
       isloading: null,
       // 触发的 name
-      activeName: 1
+      activeName: 1,
     };
   },
   created() {},
