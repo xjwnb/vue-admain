@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-08 14:29:14
- * @LastEditTime: 2020-11-11 14:09:10
+ * @LastEditTime: 2020-11-11 18:09:04
  * @LastEditors: Please set LastEditors
  * @Description: Color 页面
  * @FilePath: \vue-admain\src\views\vab\Color\index.vue
@@ -11,7 +11,6 @@
     <div class="color-group" v-for="(colors, colorName, index) in colorList">
       <ColorDiv v-for="color in colors" :key="color.id" :color="color.color" />
     </div>
-    <ColorDiv />
   </div>
 </template>
 
@@ -99,5 +98,8 @@ export default {
   flex-wrap: wrap;
   min-width: 500px;
   margin-bottom: 20px;
+}
+.color-group:last-child {
+  margin-bottom: 0;
 }
 </style>
