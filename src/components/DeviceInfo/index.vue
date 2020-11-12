@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-12 11:02:08
- * @LastEditTime: 2020-11-12 13:50:07
+ * @LastEditTime: 2020-11-12 13:52:51
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\components\DeviceInfo\index.vue
@@ -56,7 +56,7 @@ export default {
 
 <style scoped>
 .device-info {
-  border: 2px solid aliceblue;
+  border: 1rem solid aliceblue;
   border-radius: 1rem;
   width: 13rem;
   display: flex;
@@ -64,6 +64,9 @@ export default {
   justify-content: center;
   align-content: center;
   padding: 1rem;
+}
+.device-info:hover {
+  border-color: aquamarine;
 }
 p {
   margin: 0;
