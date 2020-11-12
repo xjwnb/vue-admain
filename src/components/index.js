@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-06 15:05:53
- * @LastEditTime: 2020-11-12 11:10:48
+ * @LastEditTime: 2020-11-12 15:43:20
  * @LastEditors: Please set LastEditors
  * @Description: 统一进行组件导出
  * @FilePath: \vue-admain\src\components\index.js
@@ -62,3 +62,9 @@ export const CarouselDiv = () => import("./CarouselDiv/index.vue");
  */
 // 设备信息
 export const DeviceInfo = () => import("./DeviceInfo/index.vue");
+
+/**
+ * 
+ */
+// 置顶组件
+export const Backtop = () => import("./Backtop/index.vue");

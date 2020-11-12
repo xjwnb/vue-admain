@@ -1,14 +1,15 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-10 12:00:26
- * @LastEditTime: 2020-11-11 14:09:35
+ * @LastEditTime: 2020-11-12 17:21:37
  * @LastEditors: Please set LastEditors
  * @Description: Collapse 折叠面板 页面
  * @FilePath: \vue-admain\src\views\vab\Collapse\index.vue
 -->
 <template>
-  <div id="collapse">
+  <div class="collapse">
     <el-collapse v-model="activeName" accordion>
+      <!-- 折叠面板 -->
       <CollapseDiv
         v-for="collapse in collapseData"
         :key="collapse.id"
@@ -19,12 +20,17 @@
 </template>
 
 <script>
-// 引入折叠面板组件
-import { CollapseDiv } from "@/components";
+import {
+  // 引入折叠面板组件
+  CollapseDiv,
+  // 置顶组件
+  Backtop,
+} from "@/components";
 
 export default {
   components: {
     CollapseDiv,
+    Backtop,
   },
   data() {
     return {
@@ -94,4 +100,7 @@ export default {
 </script>
 
 <style scoped>
+.collapse {
+  height: 100%;
+}
 </style>

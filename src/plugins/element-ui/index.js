@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-03 21:08:56
- * @LastEditTime: 2020-11-11 16:38:00
+ * @LastEditTime: 2020-11-12 15:45:47
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\plugins\elementUI.js
@@ -41,6 +41,7 @@ import {
   Card,
   Carousel,
   CarouselItem,
+  Backtop,
   Message,
   MessageBox,
   Notification,
@@ -82,6 +83,7 @@ const element = {
     Vue.use(Card);
     Vue.use(Carousel);
     Vue.use(CarouselItem);
+    Vue.use(Backtop);
 
     Vue.prototype.$message = Message;
     Vue.prototype.$msgbox = MessageBox;
