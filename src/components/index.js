@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-06 15:05:53
- * @LastEditTime: 2020-11-11 16:35:48
+ * @LastEditTime: 2020-11-12 11:10:48
  * @LastEditors: Please set LastEditors
  * @Description: 统一进行组件导出
  * @FilePath: \vue-admain\src\components\index.js
@@ -55,3 +55,10 @@ export const CollapseDiv = () => import("./CollapseDiv/index.vue");
  */
 // 跑马灯组件
 export const CarouselDiv = () => import("./CarouselDiv/index.vue");
+
+/**
+ * @/views/index/index
+ * 首页
+ */
+// 设备信息
+export const DeviceInfo = () => import("./DeviceInfo/index.vue");
