@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-03 18:13:40
- * @LastEditTime: 2020-11-12 13:07:04
+ * @LastEditTime: 2020-11-12 15:30:03
  * @LastEditors: Please set LastEditors
  * @Description: Vue 文件入口文件
  * @FilePath: \vue-admain\src\main.js
@@ -28,6 +28,18 @@ import "@/mock/userList";
 import anime from "animejs";
 // 引入 axios 
 import axios from 'axios';
+
+// vcarts 
+// 引入 vcarts 
+import VeLine from 'v-charts/lib/line.common'
+import Histogram from 'v-charts/lib/histogram.common'
+import Pie from 'v-charts/lib/pie.common'
+
+// 
+Vue.component(VeLine.name, VeLine);
+Vue.component(Histogram.name, Histogram);
+Vue.component(Pie.name, Pie);
+
 
 // 安装 element 插件
 Vue.use(element);
