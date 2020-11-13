@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-03 18:13:40
- * @LastEditTime: 2020-11-10 16:20:55
+ * @LastEditTime: 2020-11-13 11:39:10
  * @LastEditors: Please set LastEditors
  * @Description: 关于页面
  * @FilePath: \vue-admain\src\views\About.vue
@@ -10,12 +10,16 @@
   <div class="about">
     <h1>{{ msg.projectName }}</h1>
     <h4>开发者：{{ msg.developer }}</h4>
+    <h3>涉及技术</h3>
     <div class="technology" @click="clickHamdler">
-      <template v-for="item in msg.technology" v-key="item.id">
-        <div class="tech" :id="item.src">
-          {{ item.name }}
-        </div>
-      </template>
+      <div
+        v-for="item in msg.technology"
+        :key="item.id"
+        class="tech"
+        :id="item.src"
+      >
+        {{ item.name }}
+      </div>
     </div>
   </div>
 </template>
@@ -49,7 +53,8 @@ h1 {
   text-shadow: 1px 2px 2px aquamarine;
   font-size: 2rem;
 }
-h4 {
+h4,
+h3 {
   margin-top: 1rem;
 }
 .about {
@@ -61,7 +66,6 @@ h4 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: ＃1abc9c;
 }
 .tech {
   cursor: pointer;

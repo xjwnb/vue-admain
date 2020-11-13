@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-11-03 18:13:40
- * @LastEditTime: 2020-11-12 15:30:03
+ * @LastEditTime: 2020-11-13 11:23:13
  * @LastEditors: Please set LastEditors
  * @Description: Vue 文件入口文件
  * @FilePath: \vue-admain\src\main.js
@@ -18,10 +18,19 @@ import "@/assets/css/index.css";
 import router from "./router";
 // 引入 vuex
 import store from "./store";
+
+/**
+ * Element - UI
+ */
 // 引入 Element-UI 样式
 import "element-ui/lib/theme-chalk/index.css";
 // 按需引入 Element-UI 组件
 import element from "@/plugins/element-ui";
+// fade/zoom 等
+import 'element-ui/lib/theme-chalk/base.css';
+// collapse 展开折叠
+import CollapseTransition from 'element-ui/lib/transitions/collapse-transition';
+
 // 引入 mock 数据
 import "@/mock/userList";
 // 引入 animejs 动画库
@@ -35,11 +44,13 @@ import VeLine from 'v-charts/lib/line.common'
 import Histogram from 'v-charts/lib/histogram.common'
 import Pie from 'v-charts/lib/pie.common'
 
-// 
+
+// vcarts
 Vue.component(VeLine.name, VeLine);
 Vue.component(Histogram.name, Histogram);
 Vue.component(Pie.name, Pie);
-
+// element-ui
+Vue.component(CollapseTransition.name, CollapseTransition)
 
 // 安装 element 插件
 Vue.use(element);
