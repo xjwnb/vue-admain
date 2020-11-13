@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-05 14:08:37
- * @LastEditTime: 2020-11-13 11:41:48
+ * @LastEditTime: 2020-11-13 11:53:30
  * @LastEditors: Please set LastEditors
  * @Description: 布局容器
  * @FilePath: \vue-admain\src\common\Container\index.vue
@@ -22,11 +22,9 @@
         <el-main>
           <!-- 主题 -->
           <slot name="breadcrumb"></slot>
-          <!-- <transition name="el-zoom-in-top"> -->
           <div class="container-router-view">
             <router-view></router-view>
           </div>
-          <!-- </transition> -->
         </el-main>
       </el-container>
     </el-container>
