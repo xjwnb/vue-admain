@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-03 18:13:40
- * @LastEditTime: 2020-11-13 11:39:10
+ * @LastEditTime: 2020-11-14 17:26:57
  * @LastEditors: Please set LastEditors
  * @Description: 关于页面
  * @FilePath: \vue-admain\src\views\About.vue
@@ -10,7 +10,7 @@
   <div class="about">
     <h1>{{ msg.projectName }}</h1>
     <h4>开发者：{{ msg.developer }}</h4>
-    <h3>涉及技术</h3>
+    <h3>项目所涉及技术</h3>
     <div class="technology" @click="clickHamdler">
       <div
         v-for="item in msg.technology"
