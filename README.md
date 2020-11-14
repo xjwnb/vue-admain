@@ -1,5 +1,11 @@
 # vue-admin
 
+**运行项目：**
+
+- 打开项目运行 `npm run serve`
+- cd 到 /src/jsonserver 后，运行 `nodemon server.js`
+- 浏览器输入 http://localhost:8080/#/ 即可
+
 ## 一、涉及技术
 
 - ### Vue —— "2.6.11"
@@ -33,6 +39,8 @@
 - ### 登录
 
 - ### 注销
+
+- ### 首页
 
 - ### 表格
 
