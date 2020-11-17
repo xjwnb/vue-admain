@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-09 23:46:27
- * @LastEditTime: 2020-11-11 14:16:21
+ * @LastEditTime: 2020-11-17 11:22:25
  * @LastEditors: Please set LastEditors
  * @Description: 时间线页面
  * @FilePath: \vue-admain\src\views\vab\Timeline\index.vue
@@ -103,7 +103,7 @@ export default {
      */
     getTimeLineData() {
       return new Promise((resolve, reject) => {
-        this.$axios.get("http://localhost:3000/commitRecord").then((res) => {
+        this.$axios.get("/api/commitRecord").then((res) => {
           if (res.status === 200) {
             resolve(res.data);
           } else {
@@ -128,7 +128,7 @@ export default {
         let formDate = `${formatDateToYMD(date)} ${getHourMinuteSecond(date)}`;
         // 发送 post 网络请求提交数据
         this.$axios
-          .post("http://localhost:3000/commitRecord", {
+          .post("/api/commitRecord", {
             username: "小卡车",
             content: this.commitForm.commitContent,
             timestamp: formDate,

@@ -42,7 +42,4 @@ export default {
 };
 </script>
 <style scoped>
-.carousel:nth-last-child() {
-  margin-bottom: 0;
-}
 </style>
