@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-11-05 18:42:43
- * @LastEditTime: 2020-11-06 10:47:03
+ * @LastEditTime: 2021-02-07 17:59:31
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \vue-admain\src\common\NavMenu\index.vue
@@ -14,8 +14,7 @@
         <el-menu
           :default-active="$route.path"
           class="el-menu-vertical-demo"
-          @open="handleOpen"
-          @close="handleClose"
+          @select="handleSelect"
           background-color="#808e9b"
           text-color="#ffffff"
           router
@@ -47,14 +46,16 @@ export default {
   mounted() {},
   methods: {
     handleOpen(key, keyPath) {
-      console.log(key, keyPath);
+      // console.log(key, keyPath);
     },
     handleClose(key, keyPath) {
+      // console.log(key, keyPath);
+    },
+    handleSelect(key, keyPath) {
       console.log(key, keyPath);
     },
   },
 };
 </script>
 <style scoped>
-
 </style>
